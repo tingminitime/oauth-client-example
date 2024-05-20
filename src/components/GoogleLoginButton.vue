@@ -1,8 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  as?: string
+}>()
+</script>
 
 <template>
-  <a
+  <component
     v-bind="$attrs"
+    :is="as || 'button'"
     class="flex items-center rounded-lg border border-zinc-300 bg-white px-8 py-4 text-base font-medium text-gray-800 shadow-md hover:bg-zinc-100 focus:outline-none focus:ring-0 focus:ring-gray-500 dark:bg-zinc-700 dark:text-white dark:hover:bg-zinc-600"
   >
     <svg
@@ -43,7 +48,7 @@
       fill="#4285F4"
     /> </g> </g> </g> </svg>
     <span>Continue with Google</span>
-  </a>
+  </component>
 </template>
 
 <style scope></style>

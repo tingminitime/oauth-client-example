@@ -7,7 +7,8 @@ defineOptions({
 <template>
   <div class="flex items-center justify-center">
     <GoogleLoginButton
-      href="javascript:;"
+      as="a"
+      href="http://localhost:3000/api/auth/google/login"
     />
   </div>
 </template>
